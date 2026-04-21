@@ -163,6 +163,208 @@
         diagram.zoomTo({zoomFactor:0.36057,type:'ZoomIn',focusPoint:{x:562.5,y:62.25}});
     }
 
+const TOUCH_FRAMES = [
+    {
+        start0: { pageX: 580, pageY: 239 },
+        start1: { pageX: 576, pageY: 156.5 },
+        move0: { pageX: 580, pageY: 239 },
+        move1: { pageX: 579.5, pageY: 146.5 }
+    },
+    {
+        start0: { pageX: 580, pageY: 239 },
+        start1: { pageX: 579.5, pageY: 146.5 },
+        move0: { pageX: 580, pageY: 239 },
+        move1: { pageX: 579.5, pageY: 144.5 }
+    },
+    {
+        start0: { pageX: 580, pageY: 239 },
+        start1: { pageX: 579.5, pageY: 144.5 },
+        move0: { pageX: 580, pageY: 239 },
+        move1: { pageX: 579.5, pageY: 142.5 }
+    },
+    {
+        start0: { pageX: 580, pageY: 239 },
+        start1: { pageX: 579.5, pageY: 142.5 },
+        move0: { pageX: 580, pageY: 239 },
+        move1: { pageX: 579.5, pageY: 141.5 }
+    },
+    {
+        start0: { pageX: 580, pageY: 239 },
+        start1: { pageX: 579.5, pageY: 141.5 },
+        move0: { pageX: 585.5, pageY: 245.5 },
+        move1: { pageX: 579.5, pageY: 140 }
+    },
+    {
+        start0: { pageX: 585.5, pageY: 245.5 },
+        start1: { pageX: 579.5, pageY: 140 },
+        move0: { pageX: 585.5, pageY: 246.5 },
+        move1: { pageX: 579.5, pageY: 139.5 }
+    },
+    {
+        start0: { pageX: 585.5, pageY: 246.5 },
+        start1: { pageX: 579.5, pageY: 139.5 },
+        move0: { pageX: 585.5, pageY: 247.5 },
+        move1: { pageX: 579.5, pageY: 138.5 }
+    },
+    {
+        start0: { pageX: 585.5, pageY: 247.5 },
+        start1: { pageX: 579.5, pageY: 138.5 },
+        move0: { pageX: 585.5, pageY: 248.5 },
+        move1: { pageX: 579.5, pageY: 137.5 }
+    },
+    {
+        start0: { pageX: 585.5, pageY: 248.5 },
+        start1: { pageX: 579.5, pageY: 137.5 },
+        move0: { pageX: 585.5, pageY: 249.5 },
+        move1: { pageX: 579.5, pageY: 137 }
+    },
+    {
+        start0: { pageX: 585.5, pageY: 249.5 },
+        start1: { pageX: 579.5, pageY: 137 },
+        move0: { pageX: 585.5, pageY: 251 },
+        move1: { pageX: 579.5, pageY: 137 }
+    },
+    {
+        start0: { pageX: 585.5, pageY: 251 },
+        start1: { pageX: 579.5, pageY: 137 },
+        move0: { pageX: 585.5, pageY: 252.5 },
+        move1: { pageX: 579.5, pageY: 136 }
+    },
+    {
+        start0: { pageX: 585.5, pageY: 252.5 },
+        start1: { pageX: 579.5, pageY: 136 },
+        move0: { pageX: 585.5, pageY: 253.5 },
+        move1: { pageX: 579.5, pageY: 135.5 }
+    },
+    {
+        start0: { pageX: 585.5, pageY: 253.5 },
+        start1: { pageX: 579.5, pageY: 135.5 },
+        move0: { pageX: 585.5, pageY: 255.5 },
+        move1: { pageX: 579.5, pageY: 135 }
+    },
+    {
+        start0: { pageX: 585.5, pageY: 255.5 },
+        start1: { pageX: 579.5, pageY: 135 },
+        move0: { pageX: 585.5, pageY: 257 },
+        move1: { pageX: 579, pageY: 135 }
+    },
+    {
+        start0: { pageX: 585.5, pageY: 257 },
+        start1: { pageX: 579, pageY: 135 },
+        move0: { pageX: 585.5, pageY: 258.5 },
+        move1: { pageX: 578.5, pageY: 134 }
+    },
+    {
+        start0: { pageX: 585.5, pageY: 258.5 },
+        start1: { pageX: 578.5, pageY: 134 },
+        move0: { pageX: 585, pageY: 260.5 },
+        move1: { pageX: 578.5, pageY: 133.5 }
+    },
+    {
+        start0: { pageX: 585, pageY: 260.5 },
+        start1: { pageX: 578.5, pageY: 133.5 },
+        move0: { pageX: 585, pageY: 261.5 },
+        move1: { pageX: 578, pageY: 132.5 }
+    },
+    {
+        start0: { pageX: 585, pageY: 261.5 },
+        start1: { pageX: 578, pageY: 132.5 },
+        move0: { pageX: 585, pageY: 263 },
+        move1: { pageX: 578, pageY: 132.5 }
+    },
+    {
+        start0: { pageX: 585, pageY: 263 },
+        start1: { pageX: 578, pageY: 132.5 },
+        move0: { pageX: 585, pageY: 263.5 },
+        move1: { pageX: 578, pageY: 132 }
+    },
+    {
+        start0: { pageX: 585, pageY: 263.5 },
+        start1: { pageX: 578, pageY: 132 },
+        move0: { pageX: 585, pageY: 264 },
+        move1: { pageX: 578, pageY: 131.5 }
+    },
+    {
+        start0: { pageX: 585, pageY: 264 },
+        start1: { pageX: 578, pageY: 131.5 },
+        move0: { pageX: 585, pageY: 264.5 },
+        move1: { pageX: 578, pageY: 131 }
+    },
+    {
+        start0: { pageX: 585, pageY: 264.5 },
+        start1: { pageX: 578, pageY: 131 },
+        move0: { pageX: 585, pageY: 264.5 },
+        move1: { pageX: 578, pageY: 130 }
+    },
+    {
+        start0: { pageX: 585, pageY: 264.5 },
+        start1: { pageX: 578, pageY: 130 },
+        move0: { pageX: 585, pageY: 264.5 },
+        move1: { pageX: 578, pageY: 129.5 }
+    },
+    {
+        start0: { pageX: 585, pageY: 264.5 },
+        start1: { pageX: 578, pageY: 129.5 },
+        move0: { pageX: 585, pageY: 264.5 },
+        move1: { pageX: 578, pageY: 129 }
+    },
+    {
+        start0: { pageX: 585, pageY: 264.5 },
+        start1: { pageX: 578, pageY: 129 },
+        move0: { pageX: 585, pageY: 265 },
+        move1: { pageX: 578, pageY: 129 }
+    }
+];
+
+document.getElementById('test').onclick = () => {
+
+    for (let i = 0; i < TOUCH_FRAMES.length; i++) {
+        var startTouch0 = TOUCH_FRAMES[i].start0;
+        var startTouch1 = TOUCH_FRAMES[i].start1;
+        var moveTouch0 = TOUCH_FRAMES[i].move0;
+        var moveTouch1 = TOUCH_FRAMES[i].move1;
+        console.log('startTouch0:', startTouch0);
+        console.log('startTouch1:', startTouch1);
+        console.log('moveTouch0:', moveTouch0);
+        console.log('moveTouch1:', moveTouch1);
+    
+
+
+
+    var scale = this.getDistance(moveTouch0, moveTouch1) / this.getDistance(startTouch0, startTouch1);
+
+
+    var touches = [moveTouch0, moveTouch1];
+
+    var getPinchMidPointRelativeToElement = function (touches, element) {
+        if (!touches || touches.length < 2) return null;
+
+        const rect = element.getBoundingClientRect();
+
+        const x =
+            ((touches[0].pageX + touches[1].pageX) / 2) - rect.left;
+        const y =
+            ((touches[0].pageY + touches[1].pageY) / 2) - rect.top;
+
+        return { x, y };
+    }
+
+    var focusPoint = getPinchMidPointRelativeToElement(touches, this.diagram.element);
+
+
+    // 927527: Diagram flickers while performing pinch zoom
+    if (scale !== 1) {
+        diagram.commandHandler.zoom(scale, 0, 0, focusPoint);
+    }
+}
+}
+
+function getDistance(touch1, touch2) {
+    var x = touch2.pageX - touch1.pageX;
+    var y = touch2.pageY - touch1.pageY;
+    return Math.sqrt((x * x) + (y * y));
+};
+
     // //create the Toolbar and adding items in ToolBar.
     // var toolbarEditor = new ej.navigations.Toolbar({
     //     clicked: handleToolbarClick, // Event handler for toolbar item click
