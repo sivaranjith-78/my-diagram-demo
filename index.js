@@ -104,7 +104,7 @@
     }
     //Initializes diagram control
     var diagram = new ej.diagrams.Diagram({
-        width: '100%', height: '500px',
+        width: '1180', height: '500px',
         rulerSettings:{showRulers:true},
         snapSettings: { constraints: 0 },
         //Configrues hierarchical tree layout
@@ -157,6 +157,10 @@
                 toolbarEditor.items.find(item => item.id === 'BringIntoCenter').disabled = false;
             }
         }
+    }
+
+    document.getElementById('zoom').onclick = () =>{
+        diagram.zoomTo({zoomFactor:0.36057,type:'ZoomIn',focusPoint:{x:562.5,y:62.25}});
     }
 
     // //create the Toolbar and adding items in ToolBar.
