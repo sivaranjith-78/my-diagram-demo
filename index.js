@@ -104,7 +104,8 @@
     }
     //Initializes diagram control
     var diagram = new ej.diagrams.Diagram({
-        width: '100%', height: '500px', selectionChange: selectionChange,
+        width: '100%', height: '500px',
+        rulerSettings:{showRulers:true},
         snapSettings: { constraints: 0 },
         //Configrues hierarchical tree layout
         layout: {
