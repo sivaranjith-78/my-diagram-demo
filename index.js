@@ -160,7 +160,7 @@
     }
 
     document.getElementById('zoom').onclick = () =>{
-        diagram.zoomTo({zoomFactor:0.36057,type:'ZoomIn',focusPoint:{x:562.5,y:62.25}});
+        diagram.zoomTo({zoomFactor:0.5,type:'ZoomIn',});
     }
 
 const TOUCH_FRAMES = [
